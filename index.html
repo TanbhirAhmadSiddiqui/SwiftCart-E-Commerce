@@ -4,8 +4,157 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SwiftCart-E-Commerce</title>
+    <!-- Font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--cdn of tailwind + daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom CSS Link -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>hello</h1>
+    <!--                            This is header Section -->
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl logoColor font-bold">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow -translate-x-[60px]"
+            >
+              <li><a>Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--                            This is Main Section -->
+    <main>
+      <!--                          this is banner section -->
+      <section
+        class="bg-[url('./images/banner-image.png')] bg-cover bg-center bg-no-repeat h-screen md:h-[60vh]"
+      >
+        <div
+          class="bg-black/50 h-full px-20 flex flex-col space-y-5 items-start justify-center"
+        >
+          <h1 class="text-white text-4xl font-bold">Best Collection For You</h1>
+          <p class="text-white text-xl">
+            Discover the latest trends in fashion, electronics, and more. Shop
+            with confidence and style at SwiftCart.
+          </p>
+          <button class="btn btn-primary">Shop Now</button>
+        </div>
+      </section>
+      <!--                          Why Choose Us Section -->
+      <section class="bg-gray-100">
+        <!-- 1st part -->
+        <div class="px-3 py-15 md:my-5 relative rounded text-center">
+          <h3 class="text-2xl font-semibold pb-3">First Delivery</h3>
+          <p class="text-lg">
+            Get your orders delivered to your doorstep quickly and efficiently
+          </p>
+        </div>
+        <!-- 2nd part -->
+        <div
+          class="bg-gray-100 px-5 py-10 grid grid-cols-1 gap-10 md:gap-5 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="bg-white px-3 py-15 md:my-5 relative rounded">
+            <h3 class="text-2xl font-semibold pb-3">First Delivery</h3>
+            <p class="text-lg">
+              Get your orders delivered to your doorstep quickly and efficiently
+            </p>
+            <div
+              class="logoColor text-3xl absolute -top-5 rounded-lg shadow bg-[#eef2ff] p-1"
+            >
+              <i class="fa-regular fa-truck"></i>
+            </div>
+          </div>
+          <div class="bg-white px-3 py-12 md:my-5 relative rounded">
+            <h3 class="text-2xl font-semibold pb-3">24/7 Support</h3>
+            <p class="text-lg">
+              Our support team is available around the clock to assist you.
+            </p>
+            <div
+              class="logoColor text-3xl absolute -top-5 rounded-lg shadow bg-[#eef2ff] p-1"
+            >
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+          </div>
+          <div class="bg-white px-3 py-12 md:my-5 relative rounded">
+            <h3 class="text-2xl font-semibold pb-3">Secure Payment</h3>
+            <p class="text-lg">
+              Experience safe and secure transactions with our encrypted payment
+              systems.
+            </p>
+            <div
+              class="logoColor text-3xl absolute -top-5 rounded-lg shadow bg-[#eef2ff] p-1"
+            >
+              <i class="fa-solid fa-shield"></i>
+            </div>
+          </div>
+          <div class="bg-white px-3 py-12 md:my-5 relative rounded">
+            <h3 class="text-2xl font-semibold pb-3">Easy Returns</h3>
+            <p class="text-lg">
+              Get your orders delivered to your doorstep quickly and efficiently
+            </p>
+            <div
+              class="logoColor text-3xl absolute -top-5 rounded-lg shadow bg-[#eef2ff] p-1"
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- js link -->
+    <script src="js/script.js"></script>
   </body>
 </html>
