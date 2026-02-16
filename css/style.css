@@ -4,3 +4,7 @@
 .logoColor {
   color: #4f39f6;
 }
+.active {
+  background-color: rgb(26, 26, 227);
+  color: white;
+}
