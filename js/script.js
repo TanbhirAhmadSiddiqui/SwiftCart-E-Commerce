@@ -29,14 +29,38 @@ loadCategoriesButton();
 // display categories buttons
 const displayCategoriesButtons = (buttons) => {
   const targetButtonSection = document.getElementById("btnCategories");
-  buttons.forEach((button) => {
-    const btnDiv = document.createElement("div");
-    btnDiv.innerHTML = `
-        <div><button onclick="loadCategoryProducts(&quot;${button}&quot;)" class="btn rounded-3xl">${button}</button></div>
-    `;
-    targetButtonSection.append(btnDiv);
+  if (!targetButtonSection) return;
+
+  // targetButtonSection.innerHTML = "";
+
+  buttons.forEach((category) => {
+    const btn = document.createElement("button");
+
+    btn.textContent = category;
+
+    // default style
+    btn.className = "categoryBtn btn rounded-3xl bg-gray-200 text-black px-4";
+
+    // click event
+    btn.addEventListener("click", function () {
+      // 🔹 Remove active from all category buttons
+      document.querySelectorAll(".categoryBtn").forEach((b) => {
+        b.classList.remove("bg-primary", "text-white");
+        b.classList.add("bg-gray-200", "text-black");
+      });
+
+      // 🔹 Add active to clicked button
+      this.classList.remove("bg-gray-200", "text-black");
+      this.classList.add("bg-primary", "text-white");
+
+      // 🔹 Load products
+      loadCategoryProducts(category);
+    });
+
+    targetButtonSection.appendChild(btn);
   });
 };
+
 // ====================
 //(Add Active / Remove Others)
 // ====================
