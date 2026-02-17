@@ -37,6 +37,9 @@ const displayCategoriesButtons = (buttons) => {
     targetButtonSection.append(btnDiv);
   });
 };
+// ====================
+//(Add Active / Remove Others)
+// ====================
 
 //
 //
@@ -363,3 +366,20 @@ const displayCategoryProducts = (products) => {
 //             Display Products by Categories END
 //
 //
+
+// ====================
+//(Add Active / Remove Others)
+// ====================
+const navLinks = document.querySelectorAll(".navLink");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    // 🔹 Remove active from all links
+    navLinks.forEach((item) => {
+      item.classList.remove("text-primary", "font-semibold");
+    });
+
+    // 🔹 Add active to clicked link
+    this.classList.add("text-primary", "font-semibold");
+  });
+});

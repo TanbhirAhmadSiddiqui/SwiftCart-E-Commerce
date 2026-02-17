@@ -40,10 +40,14 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="navLink">Home</a></li>
+            <li>
+              <a href="products.html" class="navLink text-primary font-semibold"
+                >Products</a
+              >
+            </li>
+            <li><a href="#" class="navLink">About</a></li>
+            <li><a href="#" class="navLink">Contact</a></li>
           </ul>
         </div>
         <div class="navbar-end">
@@ -69,10 +73,16 @@
               tabindex="-1"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow -translate-x-[60px]"
             >
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html" class="navLink">Home</a></li>
+              <li>
+                <a
+                  href="products.html"
+                  class="navLink text-primary font-semibold"
+                  >Products</a
+                >
+              </li>
+              <li><a href="#" class="navLink">About</a></li>
+              <li><a href="#" class="navLink">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -153,18 +163,26 @@
           <h6 class="font-semibold text-lg">Quick Links</h6>
           <ul class="space-y-2 text-sm">
             <li>
-              <a href="index.html" class="hover:text-primary transition"
+              <a href="index.html" class="hover:text-primary transition navLink"
                 >Home</a
               >
             </li>
             <li>
-              <a href="products.html" class="hover:text-primary transition"
+              <a
+                href="products.html"
+                class="hover:text-primary transition navLink text-primary font-semibold"
                 >Products</a
               >
             </li>
-            <li><a href="#" class="hover:text-primary transition">About</a></li>
             <li>
-              <a href="#" class="hover:text-primary transition">Contact</a>
+              <a href="#" class="hover:text-primary transition navLink"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-primary transition navLink"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -173,7 +191,9 @@
         <div class="space-y-3">
           <h6 class="font-semibold text-lg">Support</h6>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-primary transition">FAQ</a></li>
+            <li>
+              <a href="#" class="hover:text-primary transition">FAQ</a>
+            </li>
             <li>
               <a href="#" class="hover:text-primary transition">Shipping</a>
             </li>
