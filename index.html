@@ -40,10 +40,10 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Products</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
         <div class="navbar-end">
@@ -69,10 +69,10 @@
               tabindex="-1"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow -translate-x-[60px]"
             >
-              <li><a>Home</a></li>
-              <li><a>Products</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -106,7 +106,7 @@
             Discover the latest trends in fashion, electronics, and more. Shop
             with confidence and style at SwiftCart.
           </p>
-          <button class="btn btn-primary">Shop Now</button>
+          <a href="products.html" class="btn btn-primary">Shop Now</a>
         </div>
       </section>
       <!-- =======================
@@ -199,70 +199,30 @@
       <!-- =======================
      Trending Section Start
 ======================= -->
-      <section class="py-10">
-        <!-- Section Header -->
-        <div class="mb-6">
-          <h2 class="text-2xl font-bold">Trending Now</h2>
-        </div>
+      <section class="py-16">
+        <h2 class="text-2xl font-bold mb-8 text-center">Top Rated Products</h2>
 
-        <!-- Card Wrapper -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Product Card -->
-          <div class="card bg-base-100 w-96 shadow-md">
-            <!-- Product Image -->
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Men's Shoes"
-                class="w-full object-cover"
-              />
-            </figure>
+        <div
+          id="topRatedContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4"
+        ></div>
+      </section>
 
-            <!-- Card Body -->
-            <div class="card-body">
-              <!-- Category & Rating -->
-              <div class="flex justify-between items-center py-2">
-                <!-- Category Badge -->
-                <span
-                  class="text-xs rounded-lg bg-indigo-100 text-indigo-600 px-2 py-1"
-                >
-                  Men's Category
-                </span>
-
-                <!-- Rating -->
-                <span class="text-sm font-medium">⭐ 3.8</span>
-              </div>
-
-              <!-- Product Title -->
-              <h3 class="card-title text-lg">Card Title</h3>
-
-              <!-- Product Description (Single line with truncate) -->
-              <p class="truncate text-sm text-gray-600">
-                A card component has a figure, a body part, and inside body
-                there are title and actions parts
-              </p>
-
-              <!-- Product Price -->
-              <p class="font-bold text-lg">$109.95</p>
-
-              <!-- Card Actions -->
-              <div class="card-actions justify-between mt-3">
-                <!-- Details Button -->
-                <button class="btn btn-outline btn-sm">
-                  <i class="fa-regular fa-eye"></i>
-                  Details
-                </button>
-
-                <!-- Add to Cart Button -->
-                <button class="btn btn-primary btn-sm">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  Add
-                </button>
-              </div>
-            </div>
+      <!-- This is Modal  -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="modal.showModal()">open modal</button> -->
+      <dialog id="modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modalDetails"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
           </div>
         </div>
-      </section>
+      </dialog>
+
       <!-- =======================
      Trending Section End
 ======================= -->
@@ -293,9 +253,15 @@
         <div class="space-y-3">
           <h6 class="font-semibold text-lg">Quick Links</h6>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-primary transition">Home</a></li>
             <li>
-              <a href="#" class="hover:text-primary transition">Products</a>
+              <a href="index.html" class="hover:text-primary transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="products.html" class="hover:text-primary transition"
+                >Products</a
+              >
             </li>
             <li><a href="#" class="hover:text-primary transition">About</a></li>
             <li>
